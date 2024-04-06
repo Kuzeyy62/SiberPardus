@@ -1,6 +1,7 @@
 import sys
 import subprocess
 import os
+os.system("pip install PyQt5")
 from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QPushButton
 
 class MainWindow(QMainWindow):
