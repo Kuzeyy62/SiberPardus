@@ -4,7 +4,7 @@ import os
 try:
     from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QPushButton
 except:
-    os.system("apt install python3-PyQt5")
+    os.system("apt install python3-pyqt5")
     print("Yeniden Baslat")
 
 class MainWindow(QMainWindow):
