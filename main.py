@@ -24,7 +24,9 @@ class MainWindow(QMainWindow):
 
     def create_buttons(self):
         programs = [
-            ("Metasploit", "sudo apt-get install metasploit-framework -y"),
+            ("Metasploit", "curl https://raw.githubusercontent.com/rapid7/metasploit-omnibus/master/config/templates/metasploit-framework-wrappers/msfupdate.erb > msfinstall && \
+  chmod 755 msfinstall && \
+  ./msfinstall"),
             ("Bettercap", "sudo apt-get install bettercap -y"),
             ("Airgeddon", "sudo apt-get install airgeddon -y"),
             ("Nmap", "sudo apt-get install nmap -y"),
