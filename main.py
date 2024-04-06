@@ -1,8 +1,10 @@
 import sys
 import subprocess
 import os
-os.system("pip install PyQt5")
-from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QPushButton
+try:
+    from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QWidget, QPushButton
+except:
+    os.system("pip install PyQt5")
 
 class MainWindow(QMainWindow):
     def __init__(self):
