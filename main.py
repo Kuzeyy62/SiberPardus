@@ -7,7 +7,7 @@ class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("Siber Güvenlik Programı Yükleyici")
+        self.setWindowTitle("CyberParDus")
         self.setGeometry(100, 100, 400, 300)
 
         self.central_widget = QWidget()
@@ -41,21 +41,16 @@ class MainWindow(QMainWindow):
 
     def install_and_run(self, program_command, program_name):
         try:
-            # Programı yükleme işlemi
             subprocess.run(program_command.split())
-
-            # Programı başlatma işlemi
             subprocess.Popen([program_name.lower()])
         except Exception as e:
             print("Hata:", e)
 
     def install_and_run_slowloris(self):
         try:
-            # Slowloris'in masaüstüne klonlanması
             os.chdir(os.path.expanduser("~/Desktop"))
             subprocess.run(["git", "clone", "https://github.com/gkbrk/slowloris.git"])
 
-            # Klonlama tamamlandıktan sonra Slowloris'i başlatma
             os.chdir("slowloris")
             subprocess.Popen(["python3", "slowloris.py"])
         except Exception as e:
