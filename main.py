@@ -30,8 +30,7 @@ class MainWindow(QMainWindow):
             ("Nmap", "sudo apt-get install nmap -y"),
             ("Sqlmap", "sudo apt-get install sqlmap -y"),
             ("Hydra", "sudo apt-get install hydra -y"),
-            ("Wireshark", "sudo apt-get install wireshark -y"),
-            ("Nessus", "sudo apt-get install nessus -y")
+            ("Wireshark", "sudo apt-get install wireshark -y")
         ]
 
         for program_name, program_command in programs:
